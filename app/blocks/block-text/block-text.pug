@@ -1,0 +1,5 @@
+mixin block-text(title, texts)
+    .block-text
+        .block-text__title!= title
+        each text in texts
+            .block-text__text!= text

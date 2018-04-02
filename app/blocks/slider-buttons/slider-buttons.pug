@@ -1,0 +1,5 @@
+mixin slider-buttons(count, cls)
+    ul.slider-buttons(class= cls)
+        -for (var i = 0; i < count; ++i)
+            li.slider-buttons__item(class= !i ? 'slider-buttons__item_current' : '')
+                .slider-buttons__button

@@ -1,0 +1,25 @@
+.list-two
+  margin-top: 16px
+  padding-left: 25px
+  vertical-align: top
+  &__item
+
+    position: relative
+    vertical-align: top
+
+    &:before
+      content: ''
+      position: relative
+      top: 4px
+      left: -20px
+      display: inline-block
+      +square(5px)
+      margin-right: -5px
+      vertical-align: top
+      border-radius: 100%
+      background: $accent-color
+
+
+    + .list-two
+        &__item
+          margin-top: 16px

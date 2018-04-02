@@ -1,0 +1,36 @@
+.button-close
+  +square(60px)
+  +border_1
+  font-size: 0
+  background: $light-color
+  +transition_1
+
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    display: inline-block
+    width: 100%
+    height: 100%
+    +transition_1
+    &-container
+      position: relative
+      display: inline-block
+      +square(20px)
+
+    &_normal
+      background: $main-color
+
+    &_hover
+      opacity: 0
+      background: $light-color
+
+  &:hover
+    border-color: $accent-color
+    background: $accent-color
+    .button-close
+      &__icon
+        &_normal
+          opacity: 0
+        &_hover
+          opacity: 1

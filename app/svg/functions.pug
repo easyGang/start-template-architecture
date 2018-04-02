@@ -1,0 +1,30 @@
+- var accentColor = '#0094ff';
+- var mainColor = '#2e3133';
+- var whiteColor = '#fff';
+-
+    var color = [
+    '#2e3133',
+    '#fff',
+    '#0094ff',
+    '#fefefe',
+    ]
+
+mixin draw-cls(x)
+    each count,i in x
+        if i
+            = ',.cls-' + count
+        else
+            = '.cls-' + count
+
+mixin draw-bg(array)
+    ='*{fill-rule:evenodd}'
+    each elemArray,i in array
+        if elemArray
+            +draw-cls(elemArray)
+            ='{fill:' + color[i] + '}'
+
+
+mixin draw-style(elemArr)
+    defs
+        style
+            +draw-bg(elemArr)

@@ -1,0 +1,10 @@
+mixin logo(cls, href, kind)
+    case kind
+        when 1
+            a.logo.logo_1(class= cls, href= href || '/')
+                span Trans
+                span Light
+        default
+            a.logo(class= cls, href= href || '/')
+                span Trans
+                span Light

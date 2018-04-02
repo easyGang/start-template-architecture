@@ -1,0 +1,12 @@
+-
+    var decisions = [
+    'Акцизный<br/>груз',
+    'Технический углеводород',
+    'Детское<br/>питание',
+    // 'Детское<br/>питание',
+    ]
+mixin section-decisions()
+    section.decisions
+        .decisions__container.frame
+            each decision in decisions
+                +block-decisions(decision, links.decisions)

@@ -1,0 +1,40 @@
+-
+    var products = [
+        {
+            title: 'Авто перевозки',
+            text: 'Мы разрабатываем лучшие решения для перевозки груза для наших клиентов.',
+        },
+        {
+            title: 'Морские перевозки',
+            text: 'Мы разрабатываем лучшие решения для перевозки груза для наших клиентов.',
+        },
+        {
+            title: 'ЖД перевозки',
+            text: 'Мы разрабатываем лучшие решения для перевозки груза для наших клиентов.',
+        },
+        {
+            title: 'Складирование и хранение',
+            text: 'Мы разрабатываем лучшие решения для перевозки груза для наших клиентов.',
+        },
+        {
+            title: 'Мультимодальные перевозки',
+            text: 'Мы разрабатываем лучшие решения для перевозки груза для наших клиентов.',
+        },
+    ]
+
+mixin menu-products(cls)
+    .menu-products(class= cls)
+        ul.menu-products__menu
+            each product, i in products
+                li.menu-products__item(class= !i ? 'menu-products__item_current' : '')
+                    span.menu-products__icon(class='menu-products__icon_' + (i + 1))
+                    span!= product.title
+
+        .menu-products__window
+            .menu-products__window-content
+                each product in products
+                    .menu-products__window-wrapper
+                        h3.menu-products__window-title!= product.title
+                        p.menu-products__window-text!= product.text
+            a.menu-products__window-link(href= links.products) Узнать больше
+                span.menu-products__window-arrow

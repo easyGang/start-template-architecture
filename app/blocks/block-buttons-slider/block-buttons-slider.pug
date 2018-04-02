@@ -1,0 +1,26 @@
+mixin block-buttons-slider(cls, kind)
+    case kind
+        when 1
+            .block-buttons-slider.block-buttons-slider_1(class= cls)
+                button.block-buttons-slider__button.block-buttons-slider__left(disabled)
+                    .block-buttons-slider__arrow-cont
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_light
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_grey
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_dark
+                button.block-buttons-slider__button.block-buttons-slider__right
+                    .block-buttons-slider__arrow-cont
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_light
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_grey
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_dark
+        default
+            .block-buttons-slider(class= cls)
+                button.block-buttons-slider__button.block-buttons-slider__left(disabled)
+                    .block-buttons-slider__arrow-cont
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_light
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_grey
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_dark
+                button.block-buttons-slider__button.block-buttons-slider__right
+                    .block-buttons-slider__arrow-cont
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_light
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_grey
+                        .block-buttons-slider__arrow.block-buttons-slider__arrow_dark

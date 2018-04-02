@@ -1,0 +1,21 @@
+.menu-nav
+  display: inline-block
+  font-family: $font_bold
+  font-size: 0
+  &__item
+    display: inline-block
+    a
+      display: inline-block
+      border-left: $border
+      padding: 0 30px
+      font-size: 1rem
+      transition: all $header-delay
+      &:hover
+        text-decoration: none
+        color: $main-color
+        background: $light-color
+    + .menu-nav
+      &__item
+        a
+          border-right: $border
+

@@ -1,0 +1,27 @@
+.logo
+  display: inline-block
+  font-size: 1.5rem
+  //font-size: 24px
+  letter-spacing: 3px
+  text-transform: uppercase
+  transition: all $header-delay
+  > span
+    transition: all $header-delay
+    &:first-of-type
+      font-family: $font_bold
+
+  &:hover
+    text-decoration: none
+    background: $light-color
+    > span
+      &:first-of-type
+        color: $accent-color
+      &:last-of-type
+        color: $main-color
+
+  &_1
+    > span
+      transition: all $header-delay
+      &:first-of-type
+        color: $accent-color
+

@@ -1,0 +1,44 @@
+.button
+  position: relative
+  top: 0
+  height: 3.3333em
+  border: none
+  padding: 0 30px
+  font: 1.125rem $font_bold
+  border-radius: 30px
+  color: $light-color
+  background: $accent-color
+  outline: none
+  transition: all $delay - 0.1s
+  &-wrapper
+    display: inline-block
+    cursor: pointer
+    &:hover
+      .button
+        top: -5px
+        +shadow_1
+        color: $accent-color
+        background: $light-color
+
+    &_2
+      .button
+        height: 2.5em
+        font-size: 1rem
+
+      &:hover
+        .button
+          color: $light-color
+          background: $accent-color
+
+
+    &_3
+      .button
+        height: 2.5em
+        font-size: 1rem
+        color: $light-color
+        background: $main-color
+      &:hover
+        .button
+          color: $light-color
+          background: $accent-color
+

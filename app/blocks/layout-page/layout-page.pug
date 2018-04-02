@@ -1,0 +1,12 @@
+include ../common-mixin/common-mixin
+
+doctype html
+
+html(lang='ru')
+    +head("siteMade.pro")
+    body
+        .wrapper
+            .content
+                block content
+            block footer
+        +foot

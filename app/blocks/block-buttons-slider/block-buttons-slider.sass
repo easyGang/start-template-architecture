@@ -1,0 +1,72 @@
+.block-buttons-slider
+  white-space: nowrap
+  font-size: 0
+
+  &__button
+    position: relative
+    display: inline-block
+    width: 71px
+    height: 100px
+    border: none
+    outline: none
+    background: $light-color
+    transition: all $delay
+
+    &:hover
+      background: $accent-violet_2
+      .block-buttons-slider
+        &__arrow
+          &_dark,
+          &_grey
+            opacity: 0
+
+    &:disabled
+      .block-buttons-slider
+        &__arrow
+          &_dark
+            opacity: 0
+
+      &:hover
+        background: $light-color
+        .block-buttons-slider
+          &__arrow
+            &_grey
+              opacity: 1
+
+  &__left
+    margin-right: 10px
+    transform: rotate(180deg)
+
+  &__arrow
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    transition: all $delay
+
+    &_dark
+      background: $main-color
+      
+    &_grey
+      background: $color_2
+
+    &_light
+      background: $light-color
+
+    &-cont
+      +absolute-center-all
+      width: 32px
+      height: 60px
+
+  &_1
+    .block-buttons-slider
+
+      &__button
+        +border_1
+
+        &:hover
+          border-color: $accent-violet_2
+
+        &:disabled
+          +border_1

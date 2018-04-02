@@ -1,0 +1,7 @@
+mixin block-decisions(decision, href, cls)
+    a.block-decisions.shadow_2(class= cls href= href || '/')
+        .block-decisions__wrapper
+            .block-decisions__content
+                .block-decisions__marker-wrapper
+                    .block-decisions__marker Готовое решение
+                .block-decisions__decision!= decision

@@ -1,0 +1,16 @@
+mixin form(kind)
+    case kind
+        when 'tel'
+            form.form.form_tel
+                input(type="hidden" name="submitted" value="1")
+                .form__line
+                    input.form__input(type="tel" required="required" placeholder="Ваш телефон для связи" pattern!='[\\+]\\d{1}[\\(]\\d{3}[\\)]\\d{3}[\\-]\\d{2}[\\-]\\d{2}' minlength="18" maxlength="18" name="message_tel" value="")
+                    +button('Заказать звонок', '', '', 3)
+        when 1
+            form.form
+                input.form__input(type='text' required="required" placeholder="Ваше имя" name="message_name" value="")
+                input.form__input(type='email' required="required" placeholder="Введите свой email" name="message_email" value="")
+                input.form__input(type="tel" required="required" placeholder="Введите номер телефона" pattern!='[\\+]\\d{1}[\\(]\\d{3}[\\)]\\d{3}[\\-]\\d{2}[\\-]\\d{2}' minlength="18" maxlength="18" name="message_tel" value="")
+                textarea.form__textarea(name="message_text" placeholder="Опишите свою проблему")
+                input(type="hidden" name="submitted" value="1")
+                input.button(type="submit" value="Отправить заявку")

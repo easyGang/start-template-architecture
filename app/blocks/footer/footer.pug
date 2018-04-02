@@ -1,0 +1,57 @@
+mixin footer()
+    footer.footer
+        .footer__frame.frame
+            .footer__cell.footer__left
+
+                .footer__wrapper-logo
+                    +logo('', '', 1)
+                .footer__wrapper-tel
+                    +tel
+                .footer__wrapper-email
+                    +elem-email
+
+                +button('Связаться с нами', '', '', 2)
+            .footer__cell.footer__center
+                -
+                    var linksFooter = [
+                        {
+                            text: 'Авто перевозки',
+                            href: links.products,
+                        },
+                        {
+                            text: 'Морские перевозки',
+                            href: links.products,
+                        },
+                        {
+                            text: 'ЖД перевозки',
+                            href: links.products,
+                        },
+                        {
+                            text: 'Складирование и хранение',
+                            href: links.products,
+                        },
+                        {
+                            text: 'Мультимодальные перевозки',
+                            href: links.products,
+                        },
+                    ]
+                +list('Продукты', linksFooter)
+            .footer__cell.footer__right
+                -
+                    var linksFooter = [
+                        {
+                            text: 'Акцизный груз',
+                            href: links.products,
+                        },
+                        {
+                            text: 'Технический углеводород',
+                            href: links.products,
+                        },
+                        {
+                            text: 'Детское питание',
+                            href: links.products,
+                        },
+                    ]
+
+                +list('Решения', linksFooter)
+

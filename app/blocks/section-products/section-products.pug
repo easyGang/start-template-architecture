@@ -1,0 +1,13 @@
+mixin section-products()
+    section.products
+        .products__frame.frame
+            .products__block.shadow_3
+                .products__content
+                    h2.products__title Продукты
+                    p.products__text.
+                        Мы разрабатываем
+                        лучшие решения
+                        для перевозки груза для
+                        наших клиентов.
+                    +button('Узнать больше', '', '', 2)
+                +menu-products('products__menu')

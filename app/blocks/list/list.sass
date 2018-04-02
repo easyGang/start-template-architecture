@@ -1,0 +1,17 @@
+.list
+  &__title
+    font: 21px $font_bold
+    margin-bottom: 57px
+
+  &__item
+    font-size: 18px
+    color: $color_3
+    //border-top: 1px solid $color_1
+    + .list
+      &__item
+        margin-top: 17px
+
+  &__link
+    &:hover
+      color: $main-color
+      text-decoration: none

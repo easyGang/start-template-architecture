@@ -1,0 +1,34 @@
+mixin button(text, cls, href, kind, target)
+    case kind
+        when 1
+            if (href)
+                .button-wrapper.button-wrapper_1
+                    a.button(class= cls href= href target= target ? "_blank" : false)!= text
+            else
+                .button-wrapper.button-wrapper_1
+                    button.button(class= cls)!= text
+
+        when 2
+            if (href)
+                .button-wrapper.button-wrapper_2
+                    a.button(class= cls href= href target= target ? "_blank" : false)!= text
+            else
+                .button-wrapper.button-wrapper_2
+                    button.button(class= cls)!= text
+
+        when 3
+            if (href)
+                .button-wrapper.button-wrapper_3
+                    a.button(class= cls href= href target= target ? "_blank" : false)!= text
+            else
+                .button-wrapper.button-wrapper_3
+                    button.button(class= cls)!= text
+
+        default
+            if (href)
+                .button-wrapper.button-wrapper_1
+                    a.button(class= cls href= href target= target ? "_blank" : false)!= text
+            else
+                .button-wrapper.button-wrapper_1
+                    button.button(class= cls)!= text
+

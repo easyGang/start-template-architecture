@@ -1,0 +1,7 @@
+mixin list(title, links)
+    .list
+        .list__title!= title
+        ul.list__list
+            each link in links
+                li.list__item
+                    a.list__link(href= link.href)!= link.text

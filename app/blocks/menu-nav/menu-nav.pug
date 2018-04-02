@@ -1,0 +1,18 @@
+-
+    var menuItems = [
+        {
+            text: 'Продукты',
+            href: links.products
+        },
+        {
+            text: 'Решения',
+            href: links.decisions
+        },
+    ]
+
+mixin menu-nav(cls)
+    nav.menu-nav(class= cls)
+        ul
+            each menuItem in menuItems
+                li.menu-nav__item
+                    a(href= menuItem.href)!= menuItem.text

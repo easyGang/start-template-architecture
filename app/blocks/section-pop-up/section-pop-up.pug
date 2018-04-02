@@ -1,0 +1,55 @@
+mixin section-pop-up()
+    section.pop-up
+        .pop-up__frame
+            .pop-up__block.pop-up__block_1
+                +button-close('pop-up__button-close')
+                +block-buttons-slider('', 1)
+                h2.pop-up__title.
+                    Организация цепи поставок технического
+                    углеводорода
+                .pop-up__underline
+                -
+                    var list1 = [
+                        'Завод по выпуску технического углерода',
+                        'Входит в топ 10 России по масштабам производства',
+                    ]
+                h3.pop-up__subtitle.
+                    Описание:
+                +list-two(list1)
+
+
+                -
+                    var list2 = [
+                    'Привезти груз из завода на терминал ',
+                    'Выгрузка-погрузка через склад',
+                    'Оформление всех необходимых документов',
+                    ]
+                -
+                    var list3 = [
+                    'Экспедирование',
+                    'Ведение складского учета',
+                    'Доставка груженого контейнера в порт',
+                    ]
+                h3.pop-up__subtitle.
+                    Задачи, необходимые решить:
+                .pop-up__list-wrapper
+                    +list-two(list2, 'pop-up__list', 'pop-up__list', 'pop-up__list', 'pop-up__list', 'pop-up__list')
+                    +list-two(list3, 'pop-up__list', 'pop-up__list', 'pop-up__list', 'pop-up__list', 'pop-up__list')
+
+                -
+                    var list4 = [
+                    'Более 100 оформленных таможенных деклараций',
+                    'Оперативное предоставление ТС',
+                    ]
+                -
+                    var list5 = [
+                    'Проект организация цепи поставок дорогостоящих комплектующих',
+                    'Более 2 000 тонн перевезенного груза',
+                    ]
+                h3.pop-up__subtitle.
+                    Результат:
+                .pop-up__list-wrapper
+                    +list-two(list4, 'pop-up__list')
+                    +list-two(list5, 'pop-up__list')
+
+

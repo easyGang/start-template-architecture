@@ -1,0 +1,67 @@
+@import "reset"
+@import "vars&mixin"
+@import "fonts"
+
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: $placeholder
+  opacity: 1
+
+*:-moz-placeholder
+  color: $placeholder
+  opacity: 1
+
+*::-moz-placeholder
+  color: $placeholder
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: $placeholder
+  opacity: 1
+
+body input:focus:invalid,
+body textarea:focus:invalid
+  color: $main-color
+
+body input:valid,
+body textarea:valid
+  color: $main-color
+
+//body input:focus:required:invalid,
+//body textarea:focus:required:invalid
+//  color: $main-color
+//body input:required:valid,
+//body textarea:required:valid
+//  color: $main-color
+
+html
+  font-size: 16px
+
+html, body
+  height: 100%
+  color: $main-color
+
+body
+  font-size: 1rem
+  position: relative
+  line-height: 1.2
+  font-family: $default-font
+  background: none
+  overflow-x: hidden
+
+@import "../blocks/tel/tel"
+@import "../blocks/header/header"
+@import "../blocks/menu-nav/menu-nav"
+@import "../blocks/logo/logo"
+@import "../blocks/main-screen-home/main-screen-home"
+@import "../blocks/button/button"
+@import "../blocks/slider-buttons/slider-buttons"

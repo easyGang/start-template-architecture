@@ -1,0 +1,8 @@
+mixin block-conveyor-main-line()
+    .block-conveyor.block-conveyor-main-line
+        +block-buttons-slider('block-conveyor__block-buttons-slider')
+        +block-text('Основные линии', ['Мы сотрудничаем со всеми основными линиями.'])
+        .block-conveyor__conveyor
+            .block-conveyor__band
+                -for (var i = 0; i < 5; ++i)
+                    .block-conveyor-main-line__elem.shadow_2

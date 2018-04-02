@@ -1,0 +1,56 @@
+@mixin justify-align
+  text-align: justify
+  &:after
+    content: ''
+    display: inline-block
+    width: 100%
+
+@mixin absolute-center-x
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+
+@mixin absolute-center-y
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+@mixin absolute-center-all
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+@mixin vertical-center
+  &:after
+    display: inline-block
+    height: 100%
+    content: ''
+    vertical-align: middle
+
+@mixin square($size)
+  width: $size
+  height: $size
+
+@mixin border_1
+  border: 1px solid $color_1
+
+@mixin transition_1
+  transition: all $delay
+
+@mixin shadow_1
+  box-shadow: 0 5px 15px rgba($main-color, .15)
+
+@mixin shadow_2
+  box-shadow: 0 5px 5px rgba($main-color, .05)
+
+@mixin shadow_3
+  box-shadow: 0 5px 5px rgba($main-color, .15)
+
+@mixin shadow_4
+  box-shadow: 0 5px 25px rgba($main-color, .15)
+
+@mixin shadow_5
+  box-shadow: 0 5px 10px rgba($main-color, .15)
+
+

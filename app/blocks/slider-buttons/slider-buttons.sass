@@ -1,0 +1,27 @@
+.slider-buttons
+  display: inline-block
+
+  &__button
+    display: inline-block
+    +square(10px)
+    border-radius: 50%
+    cursor: pointer
+    background: $light-color
+    &:hover
+      background: $accent-color
+
+
+  &__item
+    +square(30px)
+    line-height: 30px
+    border-radius: 50%
+    margin-bottom: 20px
+    text-align: center
+
+    &_current
+      border: $border
+      > *
+        background: $accent-color
+
+
+

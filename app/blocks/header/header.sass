@@ -1,0 +1,55 @@
+.header
+  position: relative
+  height: 60px
+  line-height: 60px
+  border-top: $border
+  border-bottom: $border
+  color: $light-color
+  overflow: hidden
+  font-size: 0
+  z-index: 1
+  +justify-align
+  &__left,
+  &__right
+    display: inline-block
+
+  &__logo
+    padding: 0 30px
+    vertical-align: top
+
+
+  &__callback
+    font-family: $font_bold
+    border: none
+    padding: 0 30px
+    background: none
+    &:hover
+      color: $main-color
+      background: $light-color
+
+
+  &__tel
+    padding: 0 30px
+    &:hover
+      color: $main-color
+      background: $light-color
+
+
+  &__language
+    font-family: $font_bold
+    border: none
+    padding: 0 1rem
+    background: none
+    &:hover
+      color: $light-color
+      background: $accent-color
+
+  &__right
+    > *
+      display: inline-block
+      border-left: $border
+      line-height: 60px
+      font-size: 1rem
+      transition: all $header-delay
+      &:hover
+        text-decoration: none

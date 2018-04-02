@@ -1,0 +1,25 @@
+mixin block-conveyor-case()
+    .block-conveyor.block-conveyor-case
+        +block-buttons-slider('block-conveyor__block-buttons-slider')
+        +block-text('Кейсы', ['Мы разрабатываем лучшие решения по перевозкам любых типов грузов для наших клиентов.'])
+        .block-conveyor__conveyor
+            -
+                var cases = [
+                    {
+                        type: 'Клиент',
+                        title: 'Один из лидеров нефтегазовой отрасли',
+                    },
+                    {
+                        type: 'Проект',
+                        title: 'Организация цепи поставок дорогостоящего оборудования',
+                    },
+                    {
+                        type: 'Проблема',
+                        title: 'Решение проблем клиента от сторонней логистической компании',
+                    },
+                ]
+
+            .block-conveyor__band
+                each item in cases
+                    +elem-card-case(item.type, item.title)
+
