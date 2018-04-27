@@ -60,7 +60,7 @@ gulp.task('js',['js-libs','js-mylibs','js-blocks'], function() {
 // Сторонние библиотеки
 gulp.task('js-libs', function() {
     return gulp.src([
-        'app/libs/jquery/**/*.js',
+        'app/libs/jquery/dist/jquery.min.js',
         'app/libs/**/*.js',
     ])
         .pipe(concat('libs.js'))
